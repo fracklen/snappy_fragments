@@ -1,0 +1,1 @@
+require 'snappy_fragments'

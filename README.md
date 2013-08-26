@@ -22,9 +22,9 @@ Or install it yourself as:
 
 In your view
 
-<%= snappy_fragment "cache_key_of_your_choice", :expires_in => 24.hours do %>
-  <!-- large fragment with heavy computation -->
-<% end %>
+    <%= snappy_fragment "cache_key_of_your_choice", :expires_in => 24.hours do %>
+    <!-- large fragment with heavy computation -->
+    <% end %>
 
 ## Contributing
 

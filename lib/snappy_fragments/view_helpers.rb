@@ -9,8 +9,7 @@ module SnappyFragments
         compressed_fragment = Rails.cache.read(key, options)
 
         if compressed_fragment.present?
-          decompressed_fragment = Snappy.inflate(compressed_fragment).force_encoding("utf-8")
-          return decompressed_fragment.html_safe
+          return Snappy.inflate(compressed_fragment).force_encoding("utf-8").html_safe
         else
           decompressed_fragment = capture(&block)
           Rails.cache.write(key, Snappy.deflate(decompressed_fragment), options)

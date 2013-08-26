@@ -25,5 +25,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "snappy"
   spec.add_development_dependency "rspec"
   spec.add_development_dependency "dalli"
+  spec.add_development_dependency "active_support"
 
 end

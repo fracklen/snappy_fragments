@@ -1,31 +1,5 @@
 require "spec_helper"
 
-class Cache
-  def initialize
-    @fake_cache = {}
-  end
-
-  def read(key)
-    @fake_cache[key]
-  end
-
-  def write(key, options, value)
-    @fake_cache[key] = value
-  end
-end
-
-module Rails
-  def self.cache
-    @cache_client ||= Cache.new
-  end
-end
-
-module ActionView
-  class Base
-    
-  end
-end
-
 describe SnappyFragments::ViewHelpers do 
   before :all do
     ActionView::Base.send(:include,SnappyFragments::ViewHelpers)

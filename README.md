@@ -1,6 +1,8 @@
 # SnappyFragments
 
-TODO: Write a gem description
+[![Build Status](https://travis-ci.org/fracklen/snappy_fragments.png?branch=master)](https://travis-ci.org/fracklen/snappy_fragments)
+ 
+Use snappy to compress fragment caches before storage
 
 ## Installation
 
@@ -18,7 +20,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+In your view
+
+<%= snappy_fragment "cache_key_of_your_choice", :expires_in => 24.hours do %>
+  <!-- large fragment with heavy computation -->
+<% end %>
 
 ## Contributing
 
